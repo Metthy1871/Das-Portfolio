@@ -68,6 +68,7 @@ h1 {
 }
 
 h2 {
+
     font-size: 1.8rem;
     margin-bottom: 2rem;
     color: #222;
@@ -78,7 +79,78 @@ p {
     color: #555;
 }
 
+.section-header {
 
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Resume Section */
+
+#resume {
+
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+}
+
+.resume-category {
+    
+    margin-bottom: 2.5rem;
+}
+
+.resume-category h3 {
+
+    font-size: 1.5rem;
+    color: #c8102E;
+    border-bottom: 2px solid #f4f4f9;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   RESUME SECTION
+========================================= */
+
+
+/* Skills Grid */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.resume-column h4 {
+    margin-bottom: 0.8rem;
+    color: #222;
+}
+
+.resume-column ul {
+    list-style-type: none; /* Removes default messy bullets */
+}
+
+.resume-column li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Adds a clean, custom bullet point */
+.resume-column li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #c8102E;
+}
 #projects {
     
     display: grid;
@@ -129,3 +201,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
