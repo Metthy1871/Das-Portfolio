@@ -111,46 +111,48 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.skills-list {
-
-    margin-bottom: 10px;
-}
-
-/* =========================================
-   RESUME SECTION
-========================================= */
-
-
-/* Skills Grid */
 .resume-grid {
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 
+.resume-column {
+
+    margin-bottom: 10px;
+}
+
 .resume-column h4 {
+
     margin-bottom: 0.8rem;
     color: #222;
 }
 
 .resume-column ul {
-    list-style-type: none; /* Removes default messy bullets */
+
+    list-style-type: none;
 }
 
 .resume-column li {
+
     position: relative;
     padding-left: 1.2rem;
     margin-bottom: 0.5rem;
     color: #555;
 }
 
-/* Adds a clean, custom bullet point */
 .resume-column li::before {
+
     content: "▹";
     position: absolute;
     left: 0;
     color: #c8102E;
 }
+
+
+/* Projects Section */
+
 #projects {
     
     display: grid;
@@ -182,6 +184,46 @@ p {
     font-size: 1.3rem;
 }
 
+
+/* Interests section */
+
+#interests {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.interest-card {
+
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.interest-card:hover {
+
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #c8102E; 
+}
+
+.interest-card h3 {
+
+    margin-bottom: 0.5rem;
+    color: #111;
+    font-size: 1.3rem;
+    justify-self: center;
+}
+
+/* Footer */
 
 footer {
 
