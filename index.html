@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
 
     <title>Mein Portfolio</title>
@@ -12,16 +14,17 @@
     <div class = "Main-container">
 
         <header class = "Header">
-
+            
             <nav>
                 <a href = "#about">About</a> 
                 <a href = "#resume">Resume</a> 
                 <a href = "#projects">Projects</a>
                 <a href = "#contact">Contact</a>
-                
             </nav>
 
-            <a href = "https://github.com/Metthy1871">GitHub</a>
+            <nav>
+                <button id = "theme-toggle" class = "theme-btn" aria-label = "Toggle dark mode">🌙</button>
+            </nav>
 
         </header>
 
@@ -147,8 +150,6 @@
                     
                     <p>MCO for CCPROG1. Resource Management System</p>
 
-                    <p class = "role">Role: Solo Developer</p>
-
                     <div class="tech-stack">
                         <span>C</span>
                     </div>
@@ -165,10 +166,8 @@
                     </div>
                     
                     <p>Final Project for CCINFOM. Restaurant Waste Management Database App</p>
-
-                    <p class = "role">Role: SQL and Java Developer</p>
                     
-                    <div class="tech-stack">
+                    <div class = "tech-stack">
                         <span>SQL</span>
                         <span>Java</span>
                     </div>
@@ -185,14 +184,12 @@
                     </div>
                     
                     <p>MCO for CSADPRG. Banking Application</p>
-
-                    <p class = "role">Role: Kotlin Developer</p>
                     
-                    <div class="tech-stack">
+                    <div class = "tech-stack">
                         <span>Kotlin</span>
                     </div>
 
-                    <div class="project-links">
+                    <div class = "project-links">
                         <a href = "https://github.com/Metthy1871/CSADPRG-Group7/blob/main/MCO1/MP_7_Kotlin.kt" class="btn-link">View Code on GitHub</a>
                     </div>
                 </div>
@@ -205,14 +202,12 @@
                     </div>
                     
                     <p>MCO for CSADPRG. Flood Control Data Processing</p>
-
-                    <p class = "role">Role: Kotlin Developer</p>
                     
-                    <div class="tech-stack">
+                    <div class = "tech-stack">
                         <span>Kotlin</span>
                     </div>
 
-                    <div class="project-links">
+                    <div class = "project-links">
                         <a href = "https://github.com/Metthy1871/CSADPRG-Group7/tree/main/MCO2/Kotlin" class="btn-link">View Code on GitHub</a>
                     </div>
 
@@ -227,16 +222,14 @@
                     
                     <p>Forum web application for CCAPDEV MCO. Phase 1 (frontend) completed, Phase 2 (backend) currently in progress.</p>
 
-                    <p class = "role">Role: Frontend Developer</p>
-
-                    <div class="tech-stack">
+                    <div class = "tech-stack">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                         <span>React</span>
                     </div>
 
-                    <div class="project-links">
+                    <div class = "project-links">
                         <a href = "https://github.com/Metthy1871/CCAPDEV-MCO" class="btn-link">View Code on GitHub</a>
                     </div>
                 </div>
@@ -249,10 +242,8 @@
                     </div>
                     
                     <p class = "project-desc">Forum web application for CSMODEL MCO. Phase 1 completed, Phase 2 currently in progress.</p>
-
-                    <p class = "role">Role: Python Developer</p>
                     
-                    <div class="tech-stack">
+                    <div class = "tech-stack">
                         <span>Python</span>
                         <span>Jupyter</span>
                     </div>
@@ -351,10 +342,15 @@
         <footer id = "contact">
 
             <h2>Let's Connect</h2>
-            <p>Email: adrianmatthewdee11@gmail.com | <a href = "https://github.com/Metthy1871">GitHub</a></p>
+            <p>Email: adrianmatthewdee11@gmail.com</p>
+            <a href = "https://github.com/Metthy1871">GitHub</a>
 
         </footer>
 
     </div>
 
+    <script src = "script.js" defer></script>
+
 </body>
+
+</html>

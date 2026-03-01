@@ -1,3 +1,21 @@
+:root {
+
+    --bg-color: #2d2d2d;
+    --text-color: #e6edf3;
+    --card-bg: #161b22;
+    --border-color: #30363d;
+    --highlight-color: #c8102E;
+    --p5-red: #ff3333;
+}
+
+[data-theme = "light"] {
+
+    --bg-color: #f8f9fa;
+    --text-color: #000;
+    --card-bg: #161b22;
+    --border-color: #30363d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +25,8 @@
 body {
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8f9fa; 
-    color: #333;
+    background-color: var(--bg-color); 
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -28,20 +46,17 @@ h1 {
 
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #111;
 }
 
 h2 {
 
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #222;
 }
 
 p {
 
     margin-bottom: 1rem;
-    color: #555;
 }
 
 .section-header {
@@ -70,18 +85,33 @@ p {
     letter-spacing: 0.5px;
 }
 
-header a {
+.Header img {
+
+    height: 50px;
+    width: auto;
+}
+
+.Header a {
 
     text-decoration: none;
-    color: #555;
+    color: var(--text-color);
     margin-left: 1.5rem;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-header a:hover {
+.Header a:hover {
 
-    color: #c8102E;
+    color: var(--highlight-color);
+}
+
+.theme-btn {
+
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }
 
 
@@ -126,11 +156,11 @@ header a:hover {
 
 #resume {
 
-    background: #ffffff;
+    background: transparent;
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--text-color);
 }
 
 .resume-category {
@@ -141,8 +171,8 @@ header a:hover {
 .resume-category h3 {
 
     font-size: 1.5rem;
-    color: #c8102E;
-    border-bottom: 2px solid #f4f4f9;
+    color: var(--highlight-color);
+    border-bottom: 1px solid var(--text-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -162,7 +192,7 @@ header a:hover {
 .resume-column h4 {
 
     margin-bottom: 0.8rem;
-    color: #222;
+    color: var(--text-color);
 }
 
 .resume-column ul {
@@ -175,7 +205,7 @@ header a:hover {
     position: relative;
     padding-left: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 .resume-column li::before {
@@ -183,7 +213,7 @@ header a:hover {
     content: "▹";
     position: absolute;
     left: 0;
-    color: #c8102E;
+    color: var(--highlight-color);
 }
 
 
@@ -198,7 +228,7 @@ header a:hover {
 
 .project-card {
 
-    background: #ffffff;
+    background: transparent;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -213,7 +243,7 @@ header a:hover {
 
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-color: #c8102E; 
+    border-color: var(--highlight-color); 
 }
 
 .project-header {
@@ -226,6 +256,7 @@ header a:hover {
 
 .project-header h3 {
 
+    color: var(--text-color);
     margin-bottom: 0; 
 }
 
@@ -253,46 +284,39 @@ header a:hover {
     border: 1px solid #c3e6cb;
 }
 
-.project-card h3 {
-
-    margin-bottom: 0.5rem;
-    color: #111;
-    font-size: 1.3rem;
-}
-
 .project-desc {
 
     flex-grow: 1;
     margin-bottom: 1.5rem;
 }
 
-.role {
-
-    font-size: 0.85rem;
-    color: #c8102E;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-family: monospace;
-}
-
 .tech-stack {
 
     display: flex;
+    gap: 8px; 
+    margin-bottom: 10px;
     flex-wrap: wrap; 
-    gap: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .tech-stack span {
 
-    background-color: #f0f0f0;
-    color: #333; 
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
+    background-color: var(--highlight-color); 
+    color: white; 
+    padding: 4px 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    font-size: 0.8rem;
     font-weight: bold;
-    font-family: monospace; 
-    border: 1px solid #ddd;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 black;
+    transition: all 0.2s ease;
+}
+
+.tech-stack span:hover {
+    
+    transform: skew(-5deg) translate(1px, 1px);
+    background-color: var(--p5-red);
+    color: white;
 }
 
 .project-links {
@@ -304,17 +328,23 @@ header a:hover {
 
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #111;
+    background-color: var(--highlight-color);
     color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border: 2px solid black;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 black;
+    transition: all 0.2s ease;
     font-size: 0.9rem;
-    transition: background-color 0.2s;
 }
 
 .btn-link:hover {
 
-    background-color: #c8102E;
+    background-color: var(--p5-red);
+    transform: skew(-5deg) translate(1px, 1px);
 }
 
 
@@ -329,7 +359,7 @@ header a:hover {
 
 .interest-card {
 
-    background: #ffffff;
+    background: var(--bg-color);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -350,7 +380,7 @@ header a:hover {
 .interest-card h3 {
 
     margin-bottom: 0.5rem;
-    color: #111;
+    color: var(--text-color);
     font-size: 1.3rem;
     justify-self: center;
 }
