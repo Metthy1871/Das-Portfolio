@@ -12,7 +12,7 @@
 
     --bg-color: #f8f9fa;
     --text-color: #000;
-    --card-bg: #161b22;
+    --card-bg: #f8f9fa;
     --border-color: #30363d;
 }
 
@@ -74,7 +74,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2rem;
-    border-bottom: 2px solid #eaeaea;
+    border-bottom: 1px solid var(--text-color);
     margin-bottom: 3rem;
 }
 
@@ -156,7 +156,7 @@ p {
 
 #resume {
 
-    background: transparent;
+    background-color: var(--card-bg);
     padding: 3rem;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -228,7 +228,7 @@ p {
 
 .project-card {
 
-    background: transparent;
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -359,7 +359,7 @@ p {
 
 .interest-card {
 
-    background: var(--bg-color);
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -399,18 +399,20 @@ footer {
 
     text-align: center;
     padding-top: 2rem;
-    border-top: 2px solid #eaeaea;
+    border-top: 2px solid var(--text-color);
     margin-top: 4rem;
 }
 
 footer a {
 
-    color: #c8102E;
+    color: var(--highlight-color);
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
+
+    color: var(--p5-red);
     text-decoration: underline;
 }
 
