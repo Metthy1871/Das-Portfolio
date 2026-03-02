@@ -380,7 +380,7 @@ input:checked + .slider:before {
 #interests {
     
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -412,7 +412,7 @@ input:checked + .slider:before {
     justify-self: center;
 }
 
-.interest-desc {
+.interest-desc, .bio {
 
     flex-grow: 1;
     margin-bottom: 1.5rem;
