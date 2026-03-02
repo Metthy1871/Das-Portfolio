@@ -1,8 +1,8 @@
 :root {
 
-    --bg-color: #161b22;
+    --bg-color: #2f2f2f;
     --text-color: #e6edf3;
-    --card-bg: #161b22;
+    --card-bg: #2f2f2f;
     --border-color: #30363d;
     --highlight-color: #c8102E;
     --p5-red: #ff3333;
@@ -169,15 +169,15 @@ p {
     border-radius: 50%;
 }
 
-/* When the invisible checkbox is checked (Light Mode) */
 input:checked + .slider {
-    background-color: #ccc; /* Light mode bar color */
+
+    background-color: #ccc; 
 }
 
-/* Move the circle to the right in Light Mode */
 input:checked + .slider:before {
+
     transform: translateX(24px); 
-    background-color: #ffffff; /* Light mode circle color */
+    background-color: #ffffff;
 }
 
 
@@ -217,69 +217,30 @@ input:checked + .slider:before {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.resume-toggle {
 
-/* Resume Section */
-
-#resume {
-
-    background-color: var(--card-bg);
-    padding: 3rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--text-color);
-}
-
-.resume-category {
-    
-    margin-bottom: 2.5rem;
-}
-
-.resume-category h3 {
-
-    font-size: 1.5rem;
-    color: var(--highlight-color);
-    border-bottom: 1px solid var(--text-color);
-    padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.resume-grid {
+.resume-btn {
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.resume-column {
+.resume-btn:hover {
 
-    margin-bottom: 10px;
-}
-
-.resume-column h4 {
-
-    margin-bottom: 0.8rem;
-    color: var(--text-color);
-}
-
-.resume-column ul {
-
-    list-style-type: none;
-}
-
-.resume-column li {
-
-    position: relative;
-    padding-left: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
-}
-
-.resume-column li::before {
-
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: var(--highlight-color);
+    transform: skew(-5deg) translate(1px, 1px);
+    background-color: var(--p5-red);
+    color: white;
 }
 
 
